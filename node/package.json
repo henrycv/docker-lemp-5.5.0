@@ -1,0 +1,14 @@
+{
+  "name": "docker-lamp-vidriera-node",
+  "version": "1.0.0",
+  "description": "Node.js on Docker",
+  "author": "Henry Carbajal <entidad.estelar@gmail.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "grunt-contrib-jshint": "~0.10.0"
+  }
+}
