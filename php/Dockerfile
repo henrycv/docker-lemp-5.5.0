@@ -178,6 +178,7 @@ RUN set -xe \
 		--with-zlib \
 
 # BEGIN CUSTOM - Enable PHP extensions
+		--with-libxml-dir=/usr \
 		--with-gd \
 		--with-mcrypt \
 		--with-mhash \
@@ -230,7 +231,7 @@ RUN docker-php-ext-install \
 	mysqli \
 	pdo \
 	pdo_mysql \
-	# pspell \
+	pspell \
 	shmop \
 	# snmp \
 	# soap \
