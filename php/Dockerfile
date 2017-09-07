@@ -62,7 +62,7 @@ RUN apt-get update && apt-get install -y \
 		libsqlite3-0 \
 		libxml2 \
 		xz-utils \
-	# --no-install-recommends \
+	--no-install-recommends \
 	&& rm -r /var/lib/apt/lists/*
 
 ENV PHP_INI_DIR /usr/local/etc/php
@@ -136,6 +136,7 @@ RUN set -xe \
 		libedit-dev \
 		libsqlite3-dev \
 		libssl-dev \
+		libldap2-dev \
 		libxml2-dev \
 		zlib1g-dev \
 	" \
@@ -224,23 +225,23 @@ RUN docker-php-ext-configure intl
 RUN docker-php-ext-install \
 	intl \
 	gettext \
-	gmp \
 	bz2 \
 	mysql \
 	mysqli \
 	pdo \
 	pdo_mysql \
-	pspell \
+	# pspell \
 	shmop \
-	snmp \
-	soap \
+	# snmp \
+	# soap \
 	sockets \
 	sysvmsg \
 	sysvsem \
 	sysvshm \
-	wddx \
-	xmlrpc \
-	xsl
+	# wddx \
+	# xmlrpc \
+	# xsl \
+	gmp
 # END CUSTOM - Enable PHP extensions
 
 ENTRYPOINT ["docker-php-entrypoint"]
